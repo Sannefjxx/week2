@@ -13,6 +13,11 @@ int main(void) {
 	while (principal >= 0) {
 		printf("Enter loan principal (-1 to end):");
 		scanf_s("%f", &principal);
+		
+		if (principal == -1) {
+			break;
+		}
+		
 		printf("Enter interest rate:");
 		scanf_s("%f", &rate);
 		printf("Enter term of the loan in days:");
@@ -21,9 +26,7 @@ int main(void) {
 		printf("The interest charge is $ %.2f\n", interest);
 		
 
-		if (principal == -1) {
-			printf("END");
-		}
+		
 		
 	}
 }
